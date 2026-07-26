@@ -134,8 +134,7 @@ function Home({ setPage }) {
        <img
   src="/headshot.jpg"
   alt="Muiz Anthony"
-  className="w-36 h-36 rounded-full object-cover border-2 border-emerald-100 mb-6"
-  style={{ objectPosition: "center 15%" }}
+ className="w-36 h-36 rounded-full object-contain border-2 border-emerald-100 mb-6 bg-slate-50"
 />
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-4">Operations · Community · Science</p>
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
@@ -259,8 +258,7 @@ function About() {
         <img
   src="/headshot.jpg"
   alt="Muiz Anthony"
-  className="w-40 h-40 rounded-2xl object-cover object-top border-2 border-emerald-100"
-  style={{ objectPosition: "center 15%" }}
+  className="w-40 h-40 rounded-2xl object-contain border-2 border-emerald-100 bg-slate-50"
 />
         </div>
         <div className="md:col-span-3">
