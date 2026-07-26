@@ -243,7 +243,7 @@ function Home({ setPage }) {
       <section className="max-w-5xl mx-auto px-6 py-20 text-center">
         <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Next step</p>
         <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to build something that works?</h2>
-        <p className="text-slate-500 text-sm mb-8 max-w-md mx-auto">Tell me about your team and what you need — I typically reply within two business days.</p>
+        <p className="text-slate-500 text-sm mb-8 max-w-md mx-auto"><p className="text-slate-500 text-sm mb-8 leading-relaxed">I'd love to hear from you ,send me an email and I'll get back to you as soon as I can. Tell me a bit about your team and what you're looking for.</p></p>
         <button onClick={() => setPage("contact")} className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg text-sm font-semibold transition-colors">Get in touch</button>
       </section>
     </main>
@@ -350,7 +350,7 @@ function Contact() {
       <hr className="border-slate-200 mb-8" />
       <div>
         <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">LinkedIn</p>
-        <a href="https://www.linkedin.com/in/muiz-anthony-848793242/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">linkedin.com/in/muiz-anthony-848793242</a>
+        <a href="https://www.linkedin.com/in/muiz-anthony/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">linkedin.com/in/muiz-anthony-848793242</a>
       </div>
       <p className="text-xs text-slate-400 mt-6">Open to Operations roles · Lagos, Nigeria · GMT+1</p>
     </main>
@@ -376,7 +376,7 @@ function Footer({ setPage }) {
         <div className="mt-6 pt-4 border-t border-slate-50 flex flex-wrap gap-6 items-center justify-between">
           <div className="flex gap-6">
             <a href="mailto:muizanthony0@gmail.com" className="text-xs text-slate-400 hover:text-slate-600">muizanthony0@gmail.com</a>
-            <a href="https://www.linkedin.com/in/muiz-anthony-848793242/" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 hover:text-slate-600">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/muiz-anthony/" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 hover:text-slate-600">LinkedIn</a>
           </div>
           <p className="text-xs text-slate-300">2026 Muiz Anthony</p>
         </div>
