@@ -141,7 +141,7 @@ function Home({ setPage }) {
             Muiz{" "}<span className="text-emerald-600" style={{ fontStyle: "italic" }}>Anthony</span>
           </h1>
           <p className="text-slate-500 text-lg leading-relaxed mb-8">
-            I build operational systems, grow communities, and execute processes that deliver measurable outcomes — from grant pipelines to campus-level activations.
+            I build operational systems, grow communities, and execute processes that deliver measurable outcomes from grant pipelines to campus-level activations.
           </p>
           <div className="flex flex-wrap gap-3">
             <button onClick={() => setPage("projects")} className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg text-sm font-semibold transition-colors">View Projects</button>
