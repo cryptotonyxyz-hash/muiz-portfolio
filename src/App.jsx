@@ -344,7 +344,7 @@ function Contact() {
   return (
     <main className="max-w-lg mx-auto px-6 py-16">
       <h1 className="text-3xl font-bold text-slate-900 mb-4">Contact</h1>
-      <p className="text-slate-500 text-sm mb-8 leading-relaxed">To reach me, send an email — I typically reply within two business days. Include a short note about your team, timeline, and what you need.</p>
+      <p className="text-slate-500 text-sm mb-8 leading-relaxed"><p className="text-slate-500 text-sm mb-8 leading-relaxed">I'd love to hear from you ,send me an email and I'll get back to you as soon as I can. Tell me a bit about your team and what you're looking for.</p></p>
       <a href="mailto:muizanthony0@gmail.com" className="text-emerald-600 font-medium text-base hover:underline block mb-6">muizanthony0@gmail.com</a>
       <a href="mailto:muizanthony0@gmail.com" className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg text-sm font-semibold transition-colors mb-10">Send an Email</a>
       <hr className="border-slate-200 mb-8" />
