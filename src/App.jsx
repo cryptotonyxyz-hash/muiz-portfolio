@@ -282,10 +282,11 @@ function About() {
         <div>
           <h2 className="text-base font-bold text-slate-900 mb-4">Tools I use</h2>
           {[
-            { label: "OPERATIONS", items: ["Google Workspace", "WhatsApp Communities", "Instagram"] },
-            { label: "TECHNICAL", items: ["Python", "GitHub", "React", "FastAPI"] },
-            { label: "SCIENCE", items: ["Hematology", "Serology", "Biochemical Analysis", "Spectrophotometry"] },
-          ].map(g => (
+  { label: "OPERATIONS", items: ["Google Workspace", "Microsoft Office", "Notion", "ClickUp", "Trello", "Canva", "Excel"] },
+  { label: "TECHNICAL", items: ["Python", "GitHub", "Automation & Bot Development", "Data Analysis", "React", "FastAPI"] },
+  { label: "LEADERSHIP", items: ["Grant Writing & Proposal Development", "Community Management", "Event Planning & Execution", "Partnership Development", "Social Media Growth", "Public Speaking"] },
+  { label: "SCIENCE", items: ["Phlebotomy", "Biochemical Analysis", "Sample Processing", "Spectrophotometry", "Laboratory Data Management"] },
+].map(g => (
             <div key={g.label} className="mb-4">
               <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">{g.label}</p>
               <div className="flex flex-wrap gap-2">
@@ -350,7 +351,7 @@ function Contact() {
       <hr className="border-slate-200 mb-8" />
       <div>
         <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">LinkedIn</p>
-        <a href="https://www.linkedin.com/in/muiz-anthony/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">linkedin.com/in/muiz-anthony-848793242</a>
+        <a href="https://www.linkedin.com/in/muiz-anthony/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">linkedin.com/in/muiz-anthony</a>
       </div>
       <p className="text-xs text-slate-400 mt-6">Open to Operations roles · Lagos, Nigeria · GMT+1</p>
     </main>
