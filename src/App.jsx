@@ -134,7 +134,8 @@ function Home({ setPage }) {
         <img
   src="/headshot.jpg"
   alt="Muiz Anthony"
-  className="w-24 h-24 rounded-full object-cover border-2 border-emerald-100 mb-6"
+  className="w-36 h-36 rounded-full object-cover object-top border-2 border-emerald-100 mb-6"
+/>
 />
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-4">Operations · Community · Science</p>
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
@@ -255,10 +256,10 @@ function About() {
     <main className="max-w-5xl mx-auto px-6 py-16">
       <div className="grid md:grid-cols-5 gap-12 items-start mb-12">
         <div className="md:col-span-2">
-         <img
+        <img
   src="/headshot.jpg"
   alt="Muiz Anthony"
-  className="w-40 h-40 rounded-2xl object-cover border-2 border-emerald-100"
+  className="w-40 h-40 rounded-2xl object-cover object-top border-2 border-emerald-100"
 />
         </div>
         <div className="md:col-span-3">
