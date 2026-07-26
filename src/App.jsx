@@ -131,6 +131,11 @@ function Home({ setPage }) {
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
         <div>
+        <img
+  src="/headshot.jpg"
+  alt="Muiz Anthony"
+  className="w-24 h-24 rounded-full object-cover border-2 border-emerald-100 mb-6"
+/>
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-4">Operations · Community · Science</p>
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
             Muiz{" "}<span className="text-emerald-600" style={{ fontStyle: "italic" }}>Anthony</span>
