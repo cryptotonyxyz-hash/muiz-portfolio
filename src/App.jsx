@@ -6,7 +6,7 @@ const METRICS = [
   { end: 300, suffix: "+", label: "Student Community", sub: "LASU BitMart" },
   { end: 100, suffix: "+", label: "Users Onboarded", sub: "Crypto traders" },
   { end: 50, suffix: "+", label: "Lab Samples/Week", sub: "Clinical internship" },
-  { end: 4.36, label: "CGPA", sub: "First Class Honours" },
+  { end: 4.36, label: "CGPA", sub: "Second Class Honours" },
 ];
 
 const PROJECTS = [
@@ -14,6 +14,7 @@ const PROJECTS = [
     id: "enableher",
     org: "ENABLEHER NIGERIA",
     title: "Grant Operations & Community Growth",
+     image: "/enableher-team.jpg",
     summary: "End-to-end grant operations pipeline that secured $30,000+ from the Global Fund for Women while growing a 5,000+ member community from scratch.",
     tags: ["$30K+ Secured", "5,000+ Members", "2 Years Running"],
     outcome: "A structured grant cycle — identification, proposal, reporting — delivered consistent funding and community growth without a dedicated finance team.",
@@ -28,6 +29,7 @@ const PROJECTS = [
     id: "bitmart",
     org: "BITMART × LASU",
     title: "Campus Activation & Community Operations",
+    image: "/bitmart-event.jpg",
     summary: "Campus-level Web3 activation that built a 300+ member student community and onboarded 100+ new traders at Lagos State University.",
     tags: ["100+ Users Onboarded", "300+ Community", "IRL Event Executed"],
     outcome: "Zero-to-community execution — event planning, logistics, and ongoing management delivered measurable platform growth.",
@@ -198,6 +200,9 @@ function Home({ setPage }) {
         <div className="grid md:grid-cols-3 gap-5">
           {PROJECTS.map(p => (
             <div key={p.id} className="border border-slate-200 rounded-xl p-5 hover:border-emerald-300 hover:shadow-sm transition-all cursor-default">
+              {p.image && (
+  <img src={p.image} alt={p.title} className="w-full h-48 object-cover rounded-lg mb-4" />
+)}
               <p className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2">{p.org}</p>
               <h3 className="text-sm font-bold text-slate-900 mb-2">{p.title}</h3>
               <p className="text-xs text-slate-500 mb-4 leading-relaxed">{p.summary}</p>
@@ -245,9 +250,11 @@ function About() {
     <main className="max-w-5xl mx-auto px-6 py-16">
       <div className="grid md:grid-cols-5 gap-12 items-start mb-12">
         <div className="md:col-span-2">
-          <div className="w-40 h-40 rounded-2xl bg-emerald-50 border-2 border-emerald-100 flex items-center justify-center">
-            <span className="text-4xl font-bold text-emerald-600">MA</span>
-          </div>
+         <img
+  src="/headshot.jpg"
+  alt="Muiz Anthony"
+  className="w-40 h-40 rounded-2xl object-cover border-2 border-emerald-100"
+/>
         </div>
         <div className="md:col-span-3">
           <h1 className="text-3xl font-bold text-slate-900 mb-4">About</h1>
@@ -298,7 +305,7 @@ function Projects() {
         {PROJECTS.map(p => (
           <div key={p.id} className="border border-slate-200 rounded-xl overflow-hidden">
             <div className="p-6">
-              <p className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2">{p.org}</p>
+              
               <h2 className="text-xl font-bold text-slate-900 mb-3">{p.title}</h2>
               <p className="text-slate-500 text-sm mb-4 leading-relaxed">{p.summary}</p>
               <div className="flex flex-wrap gap-2 mb-4">
