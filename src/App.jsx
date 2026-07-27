@@ -103,7 +103,7 @@ function Counter({ end, prefix = "", suffix = "", inView }) {
 function Nav({ page, setPage }) {
   const [open, setOpen] = useState(false);
   const go = (id) => { setPage(id); setOpen(false); };
-  const links = ["home", "about", "projects", "contact"];
+  const links = ["home", "about", "projects", "resume", "contact"];
   return (
     <header style={{ position: "sticky", top: 0, zIndex: 50, background: "#fff", borderBottom: "1px solid #f1f5f9" }}>
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -348,6 +348,80 @@ function Projects() {
   );
 }
 
+function Resume() {
+  const ACHIEVEMENTS = [
+    "Secured $30,000+ in grant funding from the Global Fund for Women",
+    "Grew EnableHer Nigeria community from 0 to 5,000+ members",
+    "Onboarded 100+ new users during a single campus activation",
+    "Built a 300+ member student community from scratch at LASU",
+  ];
+
+  return (
+    <main className="max-w-5xl mx-auto px-6 py-16">
+      <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Background</p>
+      <h1 className="text-3xl font-bold text-slate-900 mb-2">Resume</h1>
+      <p className="text-slate-500 text-sm mb-2">Operations · Community · Science</p>
+      <p className="text-slate-400 text-xs mb-8">Lagos, Nigeria · Remote · GMT+1 · <a href="mailto:muizanthony0@gmail.com" className="text-emerald-600 hover:underline">muizanthony0@gmail.com</a></p>
+
+      <a href="/Muiz_Anthony_CV.pdf" download className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg text-sm font-semibold transition-colors mb-10">
+        ↓ Download PDF Resume
+      </a>
+
+      <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-6 mb-12">
+        <p className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mb-4">Selected Achievements</p>
+        <ul className="space-y-2">
+          {ACHIEVEMENTS.map((a, i) => (
+            <li key={i} className="flex items-start gap-3 text-sm text-slate-700">
+              <span className="text-emerald-500 font-bold flex-shrink-0">✦</span>{a}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <h2 className="text-xl font-bold text-slate-900 mb-6">Experience</h2>
+      <div className="space-y-8 mb-12">
+        {[
+          { role: "Co-Founder", org: "EnableHer Nigeria", period: "Sep 2024 – Present", type: "Self-employed", desc: "Grant operations pipeline and community growth for an initiative supporting people with disabilities and underserved communities.", active: true },
+          { role: "Campus Ambassador", org: "BitMart Exchange", period: "Jan 2026 – Jun 2026", type: "Part-time", desc: "Campus-level Web3 activation at Lagos State University, onboarding new users and building a lasting student community.", active: false },
+          { role: "Clinical Laboratory Intern", org: "Crystal Specialist Hospital", period: "Apr 2025 – Oct 2025", type: "Internship", desc: "Diagnostic laboratory analysis across hematology, serology, and biochemistry departments.", active: false },
+        ].map((e, i) => (
+          <div key={i} className="flex gap-4">
+            <div className="flex flex-col items-center pt-1.5">
+              <div className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${e.active ? "bg-emerald-500" : "bg-slate-300"}`} />
+              {i < 2 && <div className="w-px flex-1 bg-slate-200 mt-1" />}
+            </div>
+            <div className="pb-2">
+              <p className="text-xs text-slate-400 mb-1">{e.period}</p>
+              <h3 className="text-base font-bold text-slate-900">{e.role}</h3>
+              <p className="text-sm text-slate-500 mb-1">{e.org} · <span className="text-xs">{e.type}</span></p>
+              <p className="text-sm text-slate-600 leading-relaxed">{e.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 className="text-xl font-bold text-slate-900 mb-6">Core Skills</h2>
+      <div className="grid md:grid-cols-2 gap-8">
+        {[
+          { label: "OPERATIONS", items: ["Google Workspace", "Microsoft Office", "Notion", "ClickUp", "Trello", "Canva", "Excel"] },
+          { label: "TECHNICAL", items: ["Python", "GitHub", "Automation & Bot Development", "Data Analysis", "React", "FastAPI"] },
+          { label: "LEADERSHIP", items: ["Grant Writing & Proposal Development", "Community Management", "Event Planning & Execution", "Partnership Development", "Social Media Growth", "Public Speaking"] },
+          { label: "SCIENCE", items: ["Phlebotomy", "Hematology", "Serology", "Biochemical Analysis", "Sample Processing", "Spectrophotometry", "Laboratory Data Management"] },
+        ].map(g => (
+          <div key={g.label}>
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">{g.label}</p>
+            <div className="flex flex-wrap gap-2">
+              {g.items.map(item => <span key={item} className="text-xs border border-slate-200 text-slate-600 px-2.5 py-1 rounded-full">{item}</span>)}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <p className="text-sm text-slate-400 mt-10">Prefer LinkedIn? <a href="https://www.linkedin.com/in/muiz-anthony/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">View profile</a></p>
+    </main>
+  );
+}
+
 function Contact() {
   return (
     <main className="max-w-lg mx-auto px-6 py-16">
@@ -376,7 +450,7 @@ function Footer({ setPage }) {
             <p className="text-xs text-slate-400 mt-0.5">Lagos, Nigeria · Remote · GMT+1</p>
           </div>
           <div className="flex flex-wrap gap-6">
-            {["home", "about", "projects", "contact"].map(l => (
+           {["home", "about", "projects", "resume", "contact"].map(l => (
               <button key={l} onClick={() => setPage(l)} className="text-xs text-slate-500 hover:text-slate-900 capitalize">{l}</button>
             ))}
           </div>
@@ -401,6 +475,7 @@ export default function App() {
       {page === "home"     && <Home     setPage={setPage} />}
       {page === "about"    && <About    />}
       {page === "projects" && <Projects />}
+      {page === "resume"   && <Resume   />}
       {page === "contact"  && <Contact  />}
       <Footer setPage={setPage} />
     </div>
