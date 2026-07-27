@@ -41,19 +41,21 @@ const PROJECTS = [
     ],
   },
   {
-    id: "heatmap",
-    org: "PERSONAL PROJECT",
-    title: "Lagos Urban Heat Stress Monitor",
-    summary: "A real-time environmental monitoring system tracking heat stress across Lagos zones — React, FastAPI, Python, Leaflet.",
-    tags: ["6 Lagos Zones", "Real-time Data", "Python + React"],
-    outcome: "A functioning monitoring system with predictive alerts — operational thinking applied to environmental data.",
-    bullets: [
-      "Built React/Vite/Tailwind frontend with interactive Leaflet maps for Lagos zone data",
-      "Developed FastAPI + SQLite backend integrating Open-Meteo for live weather data",
-      "Implemented statistical predictive engine and Twilio SMS alert scaffolding",
-      "Deployed to Vercel (frontend) and Render (backend) as a live, accessible system",
-    ],
-  },
+  id: "heatmap",
+  org: "PERSONAL PROJECT",
+  title: "UHSIS — Urban Heat Stress Information System",
+  image: "/uhsis-dashboard.jpg",
+  link: "https://uhsis.lovable.app",
+  summary: "A live environmental monitoring dashboard tracking real-time heat stress across Lagos — pulling live weather data to power health advisories and safe work scheduling.",
+  tags: ["Live Dashboard", "6 Lagos Zones", "Real-time Data"],
+  outcome: "A working monitoring system, live and publicly accessible — real-time heat index, health advisories, and 7-day trend analytics for Lagos zones.",
+  bullets: [
+    "Built React/Vite frontend with interactive zone mapping and live-updating dashboard",
+    "Developed FastAPI + SQLite backend integrating Open-Meteo for real-time weather data",
+    "Implemented heat index calculation, health advisory logic, and safe work scheduling recommendations",
+    "Auto-refreshes every 5 minutes; includes 7-day trend analytics and an alert system for at-risk conditions",
+  ],
+},
 ];
 
 const WHAT_I_DO = [
@@ -321,6 +323,11 @@ function Projects() {
               <button onClick={() => setExpanded(expanded === p.id ? null : p.id)} className="text-sm text-emerald-600 font-semibold hover:underline">
                 {expanded === p.id ? "Show less ↑" : "How I approached it ↓"}
               </button>
+              {p.link && (
+                <a href={p.link} target="_blank" rel="noopener noreferrer" className="ml-4 text-sm text-emerald-600 font-semibold hover:underline">
+                  View Live Site ↗
+                </a>
+              )}
             </div>
             {expanded === p.id && (
               <div className="border-t border-slate-100 bg-slate-50 px-6 py-5">
