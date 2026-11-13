@@ -1,23 +1,18 @@
 # Muiz Anthony — Portfolio
 
-## Run locally
-```
-npm install
-npm run dev
-```
+Personal portfolio site for Muiz Anthony (Operations Specialist), live at https://muizanthonyportfolio.vercel.app
 
-## Deploy to Vercel
+## How this site works
 
-**Easiest path (no GitHub needed):**
-1. Install the Vercel CLI: `npm install -g vercel`
-2. From this folder, run: `vercel`
-3. Follow the prompts (log in, confirm project settings — framework = Vite, it auto-detects).
-4. Run `vercel --prod` to push it live.
+The site is a single self-contained static file: `index.html`. It is deployed to Vercel by uploading that file (Vercel Drop) into the existing `muizanthonyportfolio` project. There is no build step and no framework.
 
-**Recommended path (GitHub, so future edits auto-deploy):**
-1. Create a new repo on GitHub (e.g. `muiz-portfolio`).
-2. In this folder: `git init && git add . && git commit -m "Initial portfolio"`
-3. `git remote add origin <your-repo-url>` then `git push -u origin main`
-4. Go to vercel.com → New Project → Import your GitHub repo.
-5. Vercel auto-detects Vite. Click Deploy.
-6. Every future `git push` auto-deploys.
+The downloadable CV is embedded directly in `index.html` as a base64 data URI, so the file works on its own.
+
+## Files
+
+- `index.html` — the whole site (content, styles, scripts, embedded CV PDF)
+- `public/` — original images (headshot, project screenshots) embedded in the page
+
+## Editing
+
+Edit `index.html` directly, then redeploy it to Vercel. The old React/Vite app that used to live here was replaced on 13 Nov 2026; its history is still in git.
